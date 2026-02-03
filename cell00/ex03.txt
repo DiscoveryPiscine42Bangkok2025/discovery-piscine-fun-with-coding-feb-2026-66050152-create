@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Piscine Web</title>
-</head>
-<body>
+ASus@LAPTOP-G009LAHV MINGW64 ~/discovery_piscine
+$ find . ! -name "." | wc -l
+31
 
-    <h1 style="text-align: center;">Piscine Web</h1>
-    <a href="https://www.youtube.com/watch?v=INscMGmhmX4">
-        <img src="https://blog.wu.ac.th/wp-content/uploads/2023/01/8-768x768.jpg" width="45%">
-    </a>
-    <img src="https://blog.wu.ac.th/wp-content/uploads/2023/01/11.jpg" width="45%">
+ASus@LAPTOP-G009LAHV MINGW64 ~/discovery_piscine
+$ chmod +x count_files.sh
+chmod: cannot access 'count_files.sh': No such file or directory
 
-</body>
-</html>
+ASus@LAPTOP-G009LAHV MINGW64 ~/discovery_piscine
+$ ./count_files.sh | cat -e
+bash: ./count_files.sh: No such file or directory
+
+ASus@LAPTOP-G009LAHV MINGW64 ~/discovery_piscine
+$
