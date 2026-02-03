@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
+    <meta charset="UTF-8">
+    <title>Exercise 05: Tab</title>
     <style>
+        /* กำหนดขนาดและเส้นขอบของตาราง */
         table {
-            width: 100%; /* ขยายตารางให้เต็มความกว้างหน้าจอ */
-            height: 100vh; /* ขยายตารางให้เต็มความสูงหน้าจอ */
+            width: 100%;
             border-collapse: collapse;
         }
         td {
-            width: 50%; /* แบ่งสองช่องเท่าๆ กัน */
-            text-align: center; /* จัดข้อความให้อยู่กึ่งกลางแนวนอน */
-            font-size: 50px; /* ขยายขนาดข้อความให้ใหญ่ */
-            font-weight: bold;
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
         }
-        .first-cell {
-            background-color: red; /* ช่องสีแดง [cite: 69] */
-            color: black; /* ข้อความ "สีดำ" [cite: 68] */
+        /* กำหนดสีพื้นหลังให้แต่ละช่องตามเงื่อนไข [cite: 69] */
+        .cell-one {
+            background-color: red;
         }
-        .second-cell {
-            background-color: black; /* ช่องสีดำ [cite: 69] */
-            color: red; /* ข้อความ "สีแดง" [cite: 68] */
+        .cell-two {
+            background-color: black;
         }
     </style>
 </head>
@@ -27,8 +27,8 @@
 
     <table>
         <tr>
-            <td class="first-cell">สีดำ</td>
-            <td class="second-cell">สีแดง</td>
+            <td class="cell-one">สีแดง</td>
+            <td class="cell-two">สีดำ</td>
         </tr>
     </table>
 
