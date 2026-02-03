@@ -1,0 +1,46 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "No arguments supplied"
+else
+    for arg in "$@"
+    do
+        mkdir "ex$arg"
+    done
+fi
+
+
+ASus@LAPTOP-G009LAHV MINGW64 ~/discovery_piscine
+$ chmod +x build.sh
+chmod: cannot access 'build.sh': No such file or directory
+
+ASus@LAPTOP-G009LAHV MINGW64 ~/discovery_piscine
+$ ./build.sh 00
+bash: ./build.sh: No such file or directory
+
+ASus@LAPTOP-G009LAHV MINGW64 ~/discovery_piscine
+$ cd ex05
+
+ASus@LAPTOP-G009LAHV MINGW64 ~/discovery_piscine/ex05
+$ chmod +x build.sh
+./build.sh 00
+
+ASus@LAPTOP-G009LAHV MINGW64 ~/discovery_piscine/ex05
+$ chmod +x ex05/build.sh
+./ex05/build.sh 00
+chmod: cannot access 'ex05/build.sh': No such file or directory
+bash: ./ex05/build.sh: No such file or directory
+
+ASus@LAPTOP-G009LAHV MINGW64 ~/discovery_piscine/ex05
+$ chmod +x build.sh
+
+ASus@LAPTOP-G009LAHV MINGW64 ~/discovery_piscine/ex05
+$ ./build.sh 00
+
+ASus@LAPTOP-G009LAHV MINGW64 ~/discovery_piscine/ex05
+$ ls -l
+total 0
+-rw-r--r-- 1 ASus 197609 0 Feb  3 16:08 build.sh
+
+ASus@LAPTOP-G009LAHV MINGW64 ~/discovery_piscine/ex05
+$ ls -l
