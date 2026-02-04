@@ -1,0 +1,74 @@
+css
+
+/* ตกแต่งปุ่มเมนูหลัก */
+.dropbtn {
+    background-color: #00429d; /* สีน้ำเงินสไตล์รถไฟ */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    min-width: 200px;
+}
+
+/* จัดตำแหน่ง container ของ dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 50px;
+}
+
+/* ส่วนของรายการเมนูที่ถูกซ่อนไว้ตอนแรก */
+.dropdown-content {
+    display: none; /* ซ่อนไว้ */
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* สไตล์ของลิงก์ภายในเมนู */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* เปลี่ยนสีเมื่อเอาเมาส์ไปวางบนรายการย่อย */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* เมื่อเอาเมาส์วางที่ dropdown ให้แสดงเนื้อหาข้างใน (นี่คือส่วนสำคัญ) */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* เปลี่ยนสีปุ่มหลักเมื่อมีการเปิดเมนู */
+.dropdown:hover .dropbtn {
+    background-color: #002d6b;
+}
+
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNCF Sandwich Menu</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropbtn">SNCF Menu ☰</button>
+        <div class="dropdown-content">
+            <a href="#">Ham & Cheese</a>
+            <a href="#">Paris - Lyon Express</a>
+            <a href="#">Lunar Eclipse Special</a>
+        </div>
+    </div>
+</body>
+</html>
