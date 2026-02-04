@@ -1,0 +1,88 @@
+css
+
+/* ล้างค่าเริ่มต้น */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ตั้งค่าเอฟเฟกต์ Parallax  */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ใส่รูปภาพตัวอย่าง */
+.img1 {
+    background-image: url("https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1000"); 
+}
+
+.img2 {
+    background-image: url("https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=80&w=1000");
+}
+
+/* บล็อกข้อความสีดำบนรูปภาพ (ตามที่คุณต้องการ) */
+.black-box {
+    background-color: #000; /* สีดำสนิท */
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+    border: 1px solid #555; /* ขอบบางๆ เพิ่มความคมชัด */
+}
+
+.black-box span {
+    font-size: 25px;
+    letter-spacing: 8px;
+    font-weight: bold;
+}
+
+/* ส่วนเนื้อหาคั่นกลางหน้าเว็บ  */
+.content-section {
+    background-color: black;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.content-section h3 {
+    letter-spacing: 5px;
+}
+
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Exercise 02</title>
+    <link rel="stylesheet" href="parallax.css">
+</head>
+<body>
+
+    <div class="parallax img1">
+        <div class="black-box">
+            <span>WELCOME TO PARALLAX</span>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h3>BLACK SECTION</h3>
+        <p>This is a black block with a message of your choice.</p>
+    </div>
+
+    <div class="parallax img2">
+        <div class="black-box">
+            <span>REACHED THE BOTTOM</span>
+        </div>
+    </div>
+
+</body>
+</html>
