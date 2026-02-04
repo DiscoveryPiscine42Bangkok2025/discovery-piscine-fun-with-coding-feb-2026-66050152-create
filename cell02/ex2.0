@@ -1,1 +1,44 @@
+css
 
+/* ตั้งค่าให้หน้าเว็บไม่มีระยะขอบ เพื่อให้ตารางคลุมได้เต็มพื้นที่ */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* ทำให้ตารางครอบคลุมพื้นที่ทั้งหมดและยืดหยุ่น */
+table {
+    width: 100%;          /* กว้างเต็มหน้าจอ */
+    height: 100%;         /* สูงเต็มหน้าจอ */
+    border-collapse: collapse; /* ยุบเส้นขอบให้เป็นเส้นเดียว */
+    table-layout: fixed;  /* ช่วยให้ตารางคงรูปและปรับขนาดได้ดีขึ้น */
+}
+
+/* ตกแต่งเพิ่มเติมเพื่อให้เห็นตารางชัดเจน */
+th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table</title>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        </table>
+</body>
+</html>
