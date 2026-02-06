@@ -1,0 +1,115 @@
+html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        .container {
+            width: 300px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #ft_list div {
+            padding: 10px;
+            margin-bottom: 5px;
+            background: #eaeaea;
+            cursor: pointer;
+        }
+
+        #ft_list div:hover {
+            background: #ffb3b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>To Do List</h1>
+    <button onclick="newTodo()">New</button>
+    <div id="ft_list"></div>
+</div>
+
+<script src="todo.js"></script>
+</body>
+</html>
+
+...................................................................................
+
+js
+
+
+function setCookie(name, value) {
+    document.cookie = name + "=" + encodeURIComponent(value) + "; path=/";
+}
+
+function getCookie(name) {
+    let cookies = document.cookie.split("; ");
+    for (let c of cookies) {
+        let [key, val] = c.split("=");
+        if (key === name) return decodeURIComponent(val);
+    }
+    return "";
+}
+
+function saveTodos() {
+    let list = [];
+    document.querySelectorAll("#ft_list div").forEach(d => {
+        list.push(d.textContent);
+    });
+    setCookie("todos", JSON.stringify(list));
+}
+
+function addTodo(text) {
+    let div = document.createElement("div");
+    div.textContent = text;
+
+    div.onclick = function () {
+        if (confirm("Remove this TO DO?")) {
+            div.remove();
+            saveTodos();
+        }
+    };
+
+    let list = document.getElementById("ft_list");
+    list.prepend(div);
+    saveTodos();
+}
+
+function newTodo() {
+    let text = prompt("New TO DO:");
+    if (text && text.trim() !== "") {
+        addTodo(text);
+    }
+}
+
+window.onload = function () {
+    let data = getCookie("todos");
+    if (data) {
+        JSON.parse(data).reverse().forEach(t => addTodo(t));
+    }
+};
