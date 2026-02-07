@@ -1,0 +1,54 @@
+/* ล้างค่าเริ่มต้น */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ตั้งค่าเอฟเฟกต์ Parallax  */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ใส่รูปภาพตัวอย่าง */
+.img1 {
+    background-image: url("https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1000"); 
+}
+
+.img2 {
+    background-image: url("https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=80&w=1000");
+}
+
+/* บล็อกข้อความสีดำบนรูปภาพ (ตามที่คุณต้องการ) */
+.black-box {
+    background-color: #000; /* สีดำสนิท */
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+    border: 1px solid #555; /* ขอบบางๆ เพิ่มความคมชัด */
+}
+
+.black-box span {
+    font-size: 25px;
+    letter-spacing: 8px;
+    font-weight: bold;
+}
+
+/* ส่วนเนื้อหาคั่นกลางหน้าเว็บ  */
+.content-section {
+    background-color: black;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.content-section h3 {
+    letter-spacing: 5px;
+}
